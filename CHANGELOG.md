@@ -12,6 +12,10 @@ All notable changes are documented here. This project follows [Semantic Versioni
 - Zero-dependency CLI and Node 24 GitHub Action.
 - Cross-platform tests, coverage thresholds, CI, CodeQL, Dependabot, and provenance publishing.
 
+### Changed
+
+- Dependabot now defers TypeScript major upgrades until the lint toolchain declares compatibility.
+
 ## [0.1.0] - 2026-08-11
 
 - First public preview.
