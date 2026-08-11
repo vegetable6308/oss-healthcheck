@@ -1,7 +1,6 @@
 # OSS Healthcheck
 
 [![CI](https://github.com/vegetable6308/oss-healthcheck/actions/workflows/ci.yml/badge.svg)](https://github.com/vegetable6308/oss-healthcheck/actions/workflows/ci.yml)
-[![npm](https://img.shields.io/npm/v/oss-healthcheck)](https://www.npmjs.com/package/oss-healthcheck)
 [![license: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 **A zero-runtime-dependency CLI and GitHub Action that turns open-source repository health into an explainable 100-point check.**
@@ -24,17 +23,17 @@ OSS Healthcheck makes that contract:
 
 ## Quick start
 
-Run without installing:
+Run the verified source revision without installing globally:
+
+```bash
+npm exec --yes --package=github:vegetable6308/oss-healthcheck#17f37153ef8aefceac5989da5442ce0a507788ad -- oss-healthcheck .
+```
+
+The npm package is not published yet. After the first registry release, the shorter commands will be:
 
 ```bash
 npx oss-healthcheck@latest .
-```
-
-Install globally:
-
-```bash
 npm install --global oss-healthcheck
-oss-healthcheck .
 ```
 
 Scan a repository and require 90 points:
@@ -97,7 +96,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
-      - uses: vegetable6308/oss-healthcheck@v1
+      # Replace this SHA with a released v1 tag once available.
+      - uses: vegetable6308/oss-healthcheck@17f37153ef8aefceac5989da5442ce0a507788ad
         with:
           min-score: "90"
 ```

@@ -6,10 +6,17 @@ OSS Healthcheck 是一个**零运行时依赖**的命令行工具与 GitHub Acti
 
 ## 快速开始
 
-无需安装即可运行：
+在首个 npm 版本发布前，可直接运行已验证的源码提交：
+
+```bash
+npm exec --yes --package=github:vegetable6308/oss-healthcheck#17f37153ef8aefceac5989da5442ce0a507788ad -- oss-healthcheck .
+```
+
+npm 包目前尚未发布。完成首次发布后，可改用更短的命令：
 
 ```bash
 npx oss-healthcheck@latest .
+npm install --global oss-healthcheck
 ```
 
 扫描当前仓库，并要求至少 90 分：
@@ -69,7 +76,8 @@ oss-healthcheck init .
 
 ```yaml
 - uses: actions/checkout@v7
-- uses: vegetable6308/oss-healthcheck@v1
+# 发布 v1 标签后可将此 SHA 替换为 v1。
+- uses: vegetable6308/oss-healthcheck@17f37153ef8aefceac5989da5442ce0a507788ad
   with:
     min-score: "90"
 ```
