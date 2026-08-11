@@ -1,0 +1,1 @@
+{"version":3,"file":"scanner.d.ts","sourceRoot":"","sources":["../src/scanner.ts"],"names":[],"mappings":"AAEA,OAAO,KAAK,EAAE,iBAAiB,EAAc,WAAW,EAAE,MAAM,YAAY,CAAC;AAE7E,eAAO,MAAM,OAAO,UAAU,CAAC;AAS/B,wBAAsB,cAAc,CAClC,IAAI,EAAE,MAAM,EACZ,OAAO,GAAE,WAAgB,GACxB,OAAO,CAAC,iBAAiB,CAAC,CA2C5B"}

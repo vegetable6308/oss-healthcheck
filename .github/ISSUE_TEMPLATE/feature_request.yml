@@ -1,0 +1,23 @@
+name: Feature request
+description: Propose an improvement based on a maintainer use case
+title: "[Feature]: "
+labels: [enhancement, triage]
+body:
+  - type: textarea
+    id: use-case
+    attributes:
+      label: Maintainer use case
+      description: What problem exists, who experiences it, and how often?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+      description: Include CLI, configuration, output, or scoring implications.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered

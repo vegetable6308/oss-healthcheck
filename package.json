@@ -1,0 +1,63 @@
+{
+  "name": "oss-healthcheck",
+  "version": "0.1.0",
+  "description": "A zero-dependency CLI and GitHub Action that audits open-source repository health.",
+  "type": "module",
+  "bin": {
+    "oss-healthcheck": "dist/cli.js"
+  },
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "action.yml",
+    "README.md",
+    "README.zh-CN.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "open-source",
+    "repository",
+    "health-check",
+    "github-action",
+    "maintainer",
+    "security",
+    "cli"
+  ],
+  "license": "MIT",
+  "author": "OSS Healthcheck contributors",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vegetable6308/oss-healthcheck.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vegetable6308/oss-healthcheck/issues"
+  },
+  "homepage": "https://github.com/vegetable6308/oss-healthcheck#readme",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "test:e2e": "node scripts/e2e.mjs",
+    "check": "npm run format:check && npm run lint && npm run typecheck && npm run test:coverage && npm run build && npm run test:e2e",
+    "prepack": "npm run check"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@types/node": "26.2.0",
+    "@vitest/coverage-v8": "4.1.10",
+    "eslint": "10.8.1",
+    "prettier": "3.9.6",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.67.0",
+    "vitest": "4.1.10"
+  }
+}

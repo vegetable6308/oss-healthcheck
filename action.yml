@@ -1,0 +1,19 @@
+name: OSS Healthcheck
+description: Audit open-source repository health and enforce a transparent minimum score.
+author: OSS Healthcheck contributors
+inputs:
+  min-score:
+    description: Minimum passing score from 0 to 100
+    required: false
+    default: "80"
+outputs:
+  score:
+    description: Calculated repository health score
+  passed:
+    description: Whether the score met the configured threshold
+runs:
+  using: node24
+  main: dist/action.js
+branding:
+  icon: heart
+  color: green
